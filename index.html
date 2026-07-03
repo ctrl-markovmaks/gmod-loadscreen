@@ -1,1 +1,28 @@
 
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Loading...</title>
+    <style>
+        body { margin: 0; padding: 0; background: #000; overflow: hidden; }
+        #bg { width: 100vw; height: 100vh; object-fit: cover; }
+    </style>
+</head>
+<body>
+    <img id="bg" src="">
+
+    <script>
+        // Список твоих прямых ссылок на картинки из Imgur. Первые два обычные, третья - рекламная (новыя версия АКР-ММ)
+        const images = [
+            "https://i.imgur.com/o0K7tQd.png",
+            "https://i.imgur.com/AKi4MGg.png",
+            "https://i.imgur.com/8UytJWG.png"
+        ];
+
+        // Случайный выбор картинки при загрузке
+        const randomImg = images[Math.floor(Math.random() * images.length)];
+        document.getElementById("bg").src = randomImg;
+    </script>
+</body>
+</html>
